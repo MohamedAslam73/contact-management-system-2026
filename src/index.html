@@ -258,6 +258,7 @@ const message = document.getElementById("message");
 // ===============================
 
 async function loadContacts() {
+message.textContent = "";
 
     try {
 
@@ -444,9 +445,11 @@ async function editContact(contactId) {
         }
 
 
-        alert("Contact updated successfully!");
+       alert("Contact updated successfully!");
 
-        loadContacts();
+message.textContent = "";
+
+loadContacts();
 
 
     } catch (error) {
@@ -497,9 +500,11 @@ async function deleteContact(contactId) {
         }
 
 
-        alert("Contact deleted successfully!");
+       alert("Contact deleted successfully!");
 
-        loadContacts();
+message.textContent = "";
+
+loadContacts();
 
 
     } catch (error) {
